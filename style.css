@@ -1,0 +1,69 @@
+.layout {
+  width: 300px;
+  margin: 20px;
+}
+
+.container {
+  width: 300px;
+  border: 1px solid black;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainInputContainer {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.mainInput {
+  padding: 5px;
+  border: 1px solid black;
+  margin: auto;
+  display: block;
+  width: 260px;
+  height: 40px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 20px;
+  border-top: 1px solid black;
+}
+
+.filterBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.filterActive {
+  text-decoration: underline;
+}
+
+.todoInput {
+  padding: 5px;
+  border: 1px solid black;
+  width: 194px;
+  height: 40px;
+  margin: 5px;
+}
+
+.todoRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 20px;
+}
+
+.deleteBtn {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
