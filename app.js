@@ -91,16 +91,25 @@ function FullStackBookToDo() {
 
     td.elements.allFilter.addEventListener("click", async function (event) {
       await td.fetchToDos()
+      td.elements.allFilter.classList.add("filterActive")
+      td.elements.activeFilter.classList.remove("filterActive")
+      td.elements.completedFilter.classList.remove("filterActive")
       td.renderToDos()
     })
 
     td.elements.activeFilter.addEventListener("click", async function (event) {
       await td.fetchToDos(false)
+      td.elements.allFilter.classList.remove("filterActive")
+      td.elements.activeFilter.classList.add("filterActive")
+      td.elements.completedFilter.classList.remove("filterActive")
       td.renderToDos()
     })
 
     td.elements.completedFilter.addEventListener("click", async function (event) {
       await td.fetchToDos(true)
+      td.elements.allFilter.classList.remove("filterActive")
+      td.elements.activeFilter.classList.remove("filterActive")
+      td.elements.completedFilter.classList.add("filterActive")
       td.renderToDos()
     })
   }
