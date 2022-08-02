@@ -5,6 +5,6 @@ https://www.fullstackbook.com/docs/projects/todo/frontend/vanillajs
 ## Setup
 
 ```
-npm install -g serve
-serve .
+npm install
+npm start
 ```

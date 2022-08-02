@@ -1,0 +1,19 @@
+{
+  "name": "fullstackbook-todo-vanillajs",
+  "version": "1.0.0",
+  "description": "https://www.fullstackbook.com/docs/projects/todo/frontend/vanillajs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-travisluong:travisluong/fullstackbook-todo-vanillajs.git"
+  },
+  "author": "Travis Luong",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.0.1"
+  }
+}
