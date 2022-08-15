@@ -54,6 +54,8 @@ function FullStackBookToDo() {
       btn.className = "deleteBtn"
       btn.dataset.id = todo.id
       const img = document.createElement("img")
+      img.className = "deleteImg"
+      img.dataset.id = todo.id
       img.src = "/material-symbols_delete-outline-sharp.svg"
       btn.appendChild(img)
 
@@ -70,7 +72,7 @@ function FullStackBookToDo() {
         td.handleClick(event.target.dataset.id)
       }
 
-      if (event.target.className === "deleteBtn") {
+      if (event.target.className === "deleteImg") {
         console.log("del");
         td.handleDelete(event.target.dataset.id)
       }
@@ -141,14 +143,15 @@ function FullStackBookToDo() {
 
   td.addToDo = async function (name) {
     const data = { name: name, completed: false }
-    await fetch(`${td.API_URL}/todos`, {
+    const res = await fetch(`${td.API_URL}/todos`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json'
       }
     })
-    td.todos.push(data)
+    const json = await res.json()
+    td.todos.push(json)
     td.renderToDos()
     td.elements.mainInput.value = ""
   }
@@ -159,6 +162,7 @@ function FullStackBookToDo() {
     })
     const idx = td.todos.findIndex((t) => t.id === parseInt(id))
     td.todos.splice(idx, 1)
+    td.renderToDos()
   }
 }
 
