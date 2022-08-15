@@ -13,7 +13,7 @@
   },
   "author": "Travis Luong",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "serve": "^14.0.1"
   }
 }
